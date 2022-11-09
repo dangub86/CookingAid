@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-favorite-ingredients-to-user
+      author: ca-user-service
+      preConditions:
+        - onFail: WARN
+          tableExists:
+            tableName: user
+      changes:
+        - addColumn:
+            tableName: user
+            columns:
+              - column:
+                  name: favorite_ingredients
+                  type: varchar(500)

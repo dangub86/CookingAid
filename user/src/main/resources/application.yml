@@ -1,0 +1,28 @@
+#Spring DB
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cAid
+    username: postgres
+    password: password
+  codec:
+    max-in-memory-size: 1MB
+  jpa:
+    #    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: true
+    open-in-view: true
+    properties:
+      hibernate:
+        default_schema: public
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        connection:
+          release_mode: after_statement
+        transaction:
+          auto_close_session: true
+        use-new-id-generator-mappings: false
+        format_sql: true
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        hbm2ddl:
+          auto: none

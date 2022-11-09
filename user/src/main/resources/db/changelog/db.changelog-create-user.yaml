@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-user
+      author: ca-user-service
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: user
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: user_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(250)
+              - column:
+                  constraints:
+                    nullable: true
+                  name: favorite_recipe
+                  type: VARCHAR(250)
+            tableName: user
