@@ -1,3 +1,4 @@
+/*
 package recipes.cookingaid.recipe.orm;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,3 +41,4 @@ public class RecipeClient {
     }
 
 }
+*/

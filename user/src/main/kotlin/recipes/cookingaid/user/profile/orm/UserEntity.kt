@@ -11,11 +11,15 @@ import jakarta.persistence.Table
 @Entity
 @Table(name = "user")
 class UserEntity(
+
     var name: String,
+
     @Column(name = "favorite_recipe")
     var favoriteRecipe: String?=null,
+
     @Column(name = "favorite_ingredients")
     var favoriteIngredients: String?=null,
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Int?=null
 )

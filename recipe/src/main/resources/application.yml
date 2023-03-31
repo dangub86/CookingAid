@@ -1,25 +1,24 @@
+
 spring:
   data:
     cassandra:
-      keyspace-name: rh
-      username: tsavqnIkrbGZTKFXMbFbMbRE
-      password: 7MuQ96ikpbnlt7A6YGeTw6GRA_i4vLZBshlPohPEdYegBwe_a,OhZ3ZmDoBe36K2g2rogvd0NvZ-xOodY27OMac_nNwGq,zYjbZEDsWRD0oI-M9yTp4N-eH4CD9Zk8im
+      keyspace-name: rechub
+      username: IBWFZWylDFshXkPWkWynSHtQ
+      password: bo7163XugL.h+F5Y,45iA.UPBbBmezXJOFcJjGRDnzdqmTQMlDBRY3bW-W7Zj-,3Ra1-RfLDZ2+6e656m84h5n13RqbZiO-xJqIg596yzZ3M5MBxruii+vaCePLqh,+s
       schema-action: recreate-drop-unused
       request:
         timeout: 10s
       connection:
         connect-timeout: 10s
         init-query-timeout: 10s
-  application:
-    name: rechub
 
 datastax.astra:
-  secure-connect-bundle: secure-connect.zip
+  secure-connect-bundle: connect.zip
 
 astra:
   db:
-    id: 60346226-2d87-4c50-975b-156c759cb766-1
+    id: 60346226-2d87-4c50-975b-156c759cb766
     region: europe-west1
-    keyspace: rh
+    keyspace: rechub
     application:
-      token: AstraCS:tsavqnIkrbGZTKFXMbFbMbRE:6a57e78c90afe85eae958c524c12975c5a2fc5ff1420ce1dbaeb958e30002308
+      token: AstraCS:IBWFZWylDFshXkPWkWynSHtQ:5ee46a0490ed5e158992c8f173346e5cfd52d2cc60d8e73dcd556c3ff906f337

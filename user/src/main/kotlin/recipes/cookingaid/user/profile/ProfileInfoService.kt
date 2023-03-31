@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service
 import recipes.cookingaid.user.profile.domain.User
 import recipes.cookingaid.user.profile.orm.UserEntity
 import recipes.cookingaid.user.profile.orm.UserRepo
+import java.util.Optional
 
 @Service
 class ProfileInfoService(val userRepo: UserRepo) {
@@ -27,6 +28,14 @@ class ProfileInfoService(val userRepo: UserRepo) {
             )
         )
 
+    }
+
+    fun findUserByName(name: String): UserEntity? {
+        return userRepo.findByName(name)
+    }
+
+    fun deleteUser(id: Int) {
+        return userRepo.deleteById(id)
     }
 
 
